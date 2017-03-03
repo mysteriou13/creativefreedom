@@ -1,0 +1,161 @@
+<?php 
+
+include_once("basepage.php");
+
+class project extends site{
+
+public function newproject($name){
+
+$name1 = "./workplace/".$name;
+
+if(!file_exists($name1)){
+
+mkdir($name1);
+
+}
+
+$name2 = "./workplace/".$name."/index.php";
+
+$page = file_get_contents('./creatsite/class/modelpage.txt');
+
+$f = fopen($name2, "a+");
+
+fwrite($f,$page);
+
+fclose($f);
+
+$project = fopen("./workplace/listeproject.txt", "a+");
+
+$p = $name.PHP_EOL;
+
+fwrite($project,$p);
+
+
+$a = fopen("./workplace/".$name."/listepage.txt","a+");
+
+$a2 = $name."\n";
+
+fwrite($a,$a2);
+
+fclose($a);
+
+}
+
+public  function listproject(){
+
+ $p = file_get_contents("./workplace/listeproject.txt");
+
+ $p2 = explode( PHP_EOL, $p);
+
+ $p3 =count($p2);
+
+ $p4 = $p3-1;
+
+ $p5 = 0;
+
+ $p6 = $p5-1;
+
+while($p5 <= $p4-1 ){
+
+$p5++;
+
+$p6 = $p5-1;
+
+echo '</br>';
+
+$a = $p2[$p5-1].$p5;
+
+$a2 = "workplace.php"."?site=".$p2[0];
+
+$a3 = 0;
+
+while($a3<$p3){
+
+$a3++;
+
+echo "<a href = ".$a2.">".$p2[$a3]."</a>";
+
+echo '</br>';
+
+}
+}
+
+}
+
+
+public function deleteproject($name,$ligne){
+
+$ptr = fopen("./workplace/listeproject.txt", "r");
+   $contenu = fread($ptr, filesize("./workplace/listeproject.txt"));
+    
+   /* On a plus besoin du pointeur */
+   fclose($ptr);
+ 
+   $contenu = explode(PHP_EOL, $contenu); /* PHP_EOL contient le saut à la ligne utilisé sur le serveur (\n linux, \r\n windows ou \r Macintosh */
+    
+   unset($contenu[$ligne]); /* On supprime  */
+   $contenu = array_values($contenu); /* Ré-indexe l'array */
+    
+   /* Puis on reconstruit le tout et on l'écrit */
+   $contenu = implode(PHP_EOL, $contenu);
+   $ptr = fopen("./workplace/listeproject.txt", "w");
+   fwrite($ptr, $contenu);
+
+
+$dossier_traite = "./workplace/".$name;
+
+
+$repertoire = opendir($dossier_traite); // On définit le répertoire dans lequel on souhaite travailler.
+
+ 
+
+while (false !== ($fichier = readdir($repertoire))) // On lit chaque fichier du répertoire dans la boucle.
+
+{
+
+$chemin = $dossier_traite."/".$fichier; // On définit le chemin du fichier à effacer.
+
+ 
+
+// Si le fichier n'est pas un répertoire…
+
+if ($fichier != ".." AND $fichier != "." AND !is_dir($fichier))
+
+       {
+
+       unlink($chemin); // On efface.
+
+       }
+
+}
+
+
+
+
+rmdir($dossier_traite);
+
+closedir($repertoire); 
+
+}
+
+
+public function listepage($name){
+
+ $p = "workplace/".$name."/listepage.txt";
+
+
+fopen($p,"w");
+
+$p1 = file_get_contents($p);
+
+$p2 = explode(PHP_EOL, $p1);
+
+$p3 = count($p2);
+
+echo $p2[0];
+
+}
+
+}
+
+?>

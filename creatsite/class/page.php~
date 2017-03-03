@@ -1,0 +1,28 @@
+<?php 
+
+include_once("./basepage.php");
+
+class page extends site{
+
+public function newproject($name){
+
+
+$name1 = "./workplace/".$name;
+
+mkdir($name1);
+
+$name2 = "./workplace/".$name."/index.php";
+
+fopen($name2,"a+");
+
+
+$page = file_get_contents('./creatsite/pagesite/modelpage.txt');
+
+$f = fopen($name2, "a+");
+
+fwrite($f,$page);
+
+}
+
+}
+?>
