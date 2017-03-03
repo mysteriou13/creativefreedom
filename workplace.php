@@ -36,6 +36,14 @@ $place = new project();
 list page:
 
 </br>
+</br>
+
+
+<a href = "<?php echo  htmlspecialchars(trim($_GET['url'])); ?>"><?php echo  htmlspecialchars(trim("retour a l'index")); ?> </a>
+
+</br>
+</br>
+
 
 
 <?php

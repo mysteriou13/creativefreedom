@@ -116,11 +116,13 @@ $p4 = 0;
 
 $a3 = 0;
 
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
 while($a3<$p3-1){
 
 $a3++;
 
-$page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3."";
+$page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3."&url=".$url."";
 
 echo'</br>';
 
