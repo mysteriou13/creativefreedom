@@ -106,6 +106,7 @@ $i = "./workplace/listeproject.txt";
 
 if(file_exists($i)){
 
+
  $p = file_get_contents("./workplace/listeproject.txt");
 
  $p2 = explode(PHP_EOL, $p);
@@ -126,7 +127,7 @@ $page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3."&url=".$url."";
 
 echo'</br>';
 
-echo "<a href =".$page.">".$p2[$a3-1]."</a>";
+echo "<div onclick = 'listepage()' >  ".$p2[$a3-1]."</div>";
 
 
 }
