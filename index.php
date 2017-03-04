@@ -11,7 +11,7 @@ $place = new project();
 ?>
 
 <title>
-
+creative freedom
 </title>
 
 <meta charset = "utf-8">
@@ -37,6 +37,8 @@ $place = new project();
 <p>
 
 workplace
+
+<a href = "creatproject.php"> creér un project </a>
 
 <?php 
 
