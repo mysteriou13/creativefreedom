@@ -38,7 +38,11 @@ creative freedom
 
 workplace
 
+</br>
+
 <a href = "creatproject.php"> creér un project </a>
+
+</br>
 
 <?php 
 
