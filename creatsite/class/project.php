@@ -8,21 +8,9 @@ public function newproject($name){
 
 $name1 = "./workplace/".$name;
 
-if(!file_exists($name1)){
-
-mkdir($name1);
-
-}
-
 $name2 = "./workplace/".$name."/index.php";
 
 $page = file_get_contents('./creatsite/class/modelpage.txt');
-
-$f = fopen($name2, "a+");
-
-fwrite($f,$page);
-
-fclose($f);
 
 $project = fopen("./workplace/listeproject.txt", "a+");
 
@@ -33,8 +21,6 @@ $p2 = file_get_contents("./workplace/listeproject.txt");
 $p3 = explode(PHP_EOL,$p2);
 
 $p4 = count($p3);
-
-echo '</br>';
 
 $p5 = 0;
 
@@ -57,6 +43,14 @@ $n1 = 1;
 if($n1 == 0){
 
 fwrite($project,$p);
+
+mkdir($name1);
+
+fopen($name2,"a+");
+
+fwrite($name,$page);
+
+fclose($name2);
 
 }
 
@@ -96,6 +90,12 @@ fwrite($a,$a2);
 
 }
 
+if($n2 == 1){
+
+echo 'project existe déja';
+
+}
+
 fclose($a);
 
 }
@@ -106,11 +106,11 @@ $i = "./workplace/listeproject.txt";
 
 if(file_exists($i)){
 
- $p = file_get_contents("./workplace/listeproject.txt");
+$p = file_get_contents("./workplace/listeproject.txt");
 
- $p2 = explode(PHP_EOL, $p);
+$p2 = explode(PHP_EOL, $p);
 
- $p3 =count($p2);
+$p3 =count($p2);
  
 $p4 = 0;
 
@@ -124,19 +124,24 @@ $a3++;
 
 $page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3."&url=".$url."";
 
+$page = htmlspecialchars(trim($page));
+
+$page1 = $p2[$a3-1];
+
+$page1 = htmlspecialchars(trim($page1));
+
 echo'</br>';
 
-echo "<a href =".$page.">".$p2[$a3-1]."</a>";
-
-
-}
+echo "<a href =".$page.">".$page1."</a>";
 
 }
 
 }
 
+}
 
-public function deleteproject($name,$ligne){
+
+public function deleteproject($name,$n1){
 
    $ptr = fopen("./workplace/listeproject.txt", "r");
    $contenu = fread($ptr, filesize("./workplace/listeproject.txt"));
@@ -145,7 +150,7 @@ public function deleteproject($name,$ligne){
    fclose($ptr);
  
    $contenu = explode(PHP_EOL, $contenu); /* PHP_EOL contient le saut à la ligne utilisé sur le serveur (\n linux, \r\n windows ou \r Macintosh */
- 
+   
    unset($contenu[$n1]); /* On supprime  */
    $contenu = array_values($contenu); /* Ré-indexe l'array */
     

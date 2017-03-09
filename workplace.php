@@ -48,9 +48,7 @@ list page:
 
 <?php
 
-session_start();
-
- $link = "<a href =".$_GET['site'].">".$_GET['site']."</a>" ;
+$link = "<a href =".$_GET['site'].">".$_GET['site']."</a>" ;
 
 $place->listepage($_GET['site']);
 
