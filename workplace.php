@@ -45,6 +45,12 @@ list page:
 </br>
 
 
+parametre
+
+<a href = "<?php echo htmlspecialchars(trim("parametre.php")); ?>" ><?php  echo htmlspecialchars(trim("parametre"))?> </a>
+ 
+</br>
+</br>
 
 <?php
 
