@@ -8,7 +8,7 @@ parametre
 </titre>
 
 <meta charset ="utf-8" >
-q
+
 </header>
 
 <body>
