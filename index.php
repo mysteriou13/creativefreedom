@@ -36,11 +36,11 @@ creative freedom
 
 <p>
 
-workplace
+<a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
 
 </br>
 
-<a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
+workplace
 
 </br>
 

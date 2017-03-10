@@ -46,11 +46,11 @@ list page:
 
 <?php 
 
-$p = "parametre.php&site=".$_GET['site'];
+$p = "parametre.php?site=".$_GET['site'];
 
 ?>
 
-<a href = "<?php echo htmlspecialchars(trim($p)); ?>" ><?php  echo htmlspecialchars(trim("parametre"))?> </a>
+<a href = "<?php echo htmlspecialchars(trim($p)) ?>" ><?php  echo htmlspecialchars(trim("parametre du site"))?> </a>
  
 </br>
 </br>
@@ -58,6 +58,10 @@ $p = "parametre.php&site=".$_GET['site'];
 <?php
 
 $link = "<a href =".$_GET['site'].">".$_GET['site']."</a>" ;
+
+echo 'liste page';
+
+echo '</br></br>';
 
 $place->listepage($_GET['site']);
 
