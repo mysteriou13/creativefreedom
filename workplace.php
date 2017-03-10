@@ -44,10 +44,13 @@ list page:
 </br>
 </br>
 
+<?php 
 
-parametre
+$p = "parametre.php&site=".$_GET['site'];
 
-<a href = "<?php echo htmlspecialchars(trim("parametre.php")); ?>" ><?php  echo htmlspecialchars(trim("parametre"))?> </a>
+?>
+
+<a href = "<?php echo htmlspecialchars(trim($p)); ?>" ><?php  echo htmlspecialchars(trim("parametre"))?> </a>
  
 </br>
 </br>
@@ -59,8 +62,6 @@ $link = "<a href =".$_GET['site'].">".$_GET['site']."</a>" ;
 $place->listepage($_GET['site']);
 
 ?>
-
-
 
 </p>
 
