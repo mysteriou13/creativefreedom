@@ -118,11 +118,12 @@ $a3 = 0;
 
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
+
 while($a3<$p3-1){
 
 $a3++;
 
-$page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3."&url=".$url."";
+$page = "workplace.php?site=".$p2[$a3-1]."&ligne=".$a3;
 
 $page = htmlspecialchars(trim($page));
 
@@ -130,9 +131,25 @@ $page1 = $p2[$a3-1];
 
 $page1 = htmlspecialchars(trim($page1));
 
-echo'</br>';
+echo'</br> ';
 
-echo "<a href =".$page.">".$page1."</a>";
+echo "<script type = 'text/javascript'>
+
+function liste(){
+
+document.getElementBy('');
+
+}
+
+ </script>";
+
+echo "<div onclick = 'listpage()'  id =".$page1." >".$page1."
+
+<p id = 'page'>
+
+<p>
+
+</div>";
 
 }
 
