@@ -132,7 +132,32 @@ $page1 = htmlspecialchars(trim($page1));
 
 echo'</br>';
 
-echo "<a href =".$page.">".$page1."</a>";
+echo "
+
+<script type = 'text/javascript'>
+
+
+function reply_click(clicked_id)
+{
+
+ 
+}
+
+</script>
+
+";
+
+echo "
+
+<div id ='$page1' onClick='reply_click(this.id)'>$page1 </div>
+
+<script type='text/javascript'>
+
+</script>
+
+ ";
+
+echo "</div>";
 
 }
 
