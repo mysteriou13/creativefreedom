@@ -2,6 +2,7 @@
 
 <!--index-->
 
+<html lang = "fr" >
 <?php 
 
 include_once("./creatsite/class/project.php");
