@@ -40,15 +40,16 @@ workplace
 
 </br>
 
+
 <a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
 
-</br>
 
 <?php 
 
 $place->listproject();
 
 ?>
+
 
 <p>
 

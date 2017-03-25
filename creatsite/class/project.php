@@ -118,6 +118,28 @@ $a3 = 0;
 
 $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
+
+echo "<script type='text/javascript'>
+        <!--
+
+                function AfficherCacher(texte) 
+                {
+                        var test = document.getElementById(texte).style.display;
+                        if (test == 'block') 
+                        {
+                                document.getElementById(texte).style.display = 'none';
+                        }
+                        else 
+                        {
+                                document.getElementById(texte).style.display = 'block';
+                       }
+                }
+                
+        //-->
+</script>
+";
+
+
 while($a3<$p3-1){
 
 $a3++;
@@ -130,38 +152,26 @@ $page1 = $p2[$a3-1];
 
 $page1 = htmlspecialchars(trim($page1));
 
-echo'</br>';
+$listepage = "./workplace/".$page1."/listepage.txt";
 
-echo "
+$openlistepage = file_get_contents($listepage);
 
-<script type = 'text/javascript'>
+$lienpage = "./workplace/".$page1."/".$openlistepage;
 
+echo "<p onclick= AfficherCacher('$a3'); return false > text</p>";
 
-function reply_click(clicked_id)
-{
+echo"<p id ='$a3'; style='display:none'>";
 
- 
-}
+echo "<a href ='$lienpage' >".$openlistepage.'</a>';
 
-</script>
+echo"</p>";
 
-";
-
-echo "
-
-<div id ='$page1' onClick='reply_click(this.id)'>$page1 </div>
-
-<script type='text/javascript'>
-
-</script>
-
- ";
-
-echo "</div>";
 
 }
 
+
 }
+
 
 }
 
