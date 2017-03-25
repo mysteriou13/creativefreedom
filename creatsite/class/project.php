@@ -162,7 +162,7 @@ echo "<p onclick= AfficherCacher('$a3'); return false > text</p>";
 
 echo"<p id ='$a3'; style='display:none'>";
 
-echo "<a href ='$lienpage' >".$openlistepage.'</a>';
+echo "<a href ='?page = $lienpage'>".$openlistepage.'</a>';
 
 echo"</p>";
 
