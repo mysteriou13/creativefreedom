@@ -38,14 +38,14 @@ creative freedom
 
 <section>
 
-<div>
-
+ 
 workplace
 
 </br>
 
-
 <a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
+
+<div id = "cadre">
 
 <p>
 

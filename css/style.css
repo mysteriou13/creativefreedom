@@ -1,8 +1,23 @@
-
 #cadre{
 
-height:70%;
+position:relative;
 
+border:3px black solid;
+
+width:300px;
+
+height:80%;
+
+left:-5px;
+
+top:30px;
+
+}
+
+#projet{
+
+height:70%;
+width:40%;
 border:3px black solid;
 
 }
