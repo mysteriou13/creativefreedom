@@ -15,9 +15,10 @@ $place = new project();
 creative freedom
 </title>
 
-<meta charset = "utf-8">
 
 <head>
+
+<meta charset = "utf-8">
 
 </head>
 
