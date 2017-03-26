@@ -158,13 +158,13 @@ $openlistepage = file_get_contents($listepage);
 
 $lienpage = "./workplace/".$page1."/".$openlistepage;
 
-echo "<p id = 'cadre' onclick= AfficherCacher('$a3'); return false > $page1</p>";
+echo "<p id = 'cadre' onclick= AfficherCacher('$a3'); return false > $page1";
 
-echo"<p id ='$a3'; style='display:none'>";
+echo"<span id ='$a3'; style='display:none'>";
 
 echo "<a href ='?page = $lienpage'>".$openlistepage.'</a>';
 
-echo"</p>";
+echo"</span> </p>";
 
 
 }
