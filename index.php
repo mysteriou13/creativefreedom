@@ -38,7 +38,7 @@ creative freedom
 
 <section>
 
-<p>
+<p id = "cadre">
 
 workplace
 
@@ -55,7 +55,7 @@ $place->listproject();
 ?>
 
 
-<p>
+</p>
 
 </section>
 </article>
