@@ -59,6 +59,11 @@ $place->listproject();
 
 </div>
 
+
+<div id = "canvas" >
+f
+</div>
+
 </section>
 </article>
 
