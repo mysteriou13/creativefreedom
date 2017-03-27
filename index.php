@@ -38,14 +38,16 @@ creative freedom
 
 <section>
 
- 
-workplace
 
 </br>
+
+workplace
+
 
 <a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
 
 <div id = "cadre">
+
 
 <p>
 
@@ -61,7 +63,7 @@ $place->listproject();
 
 
 <div id = "canvas" >
-f
+
 </div>
 
 </section>
