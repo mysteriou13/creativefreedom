@@ -43,6 +43,9 @@ creative freedom
 
 workplace
 
+<div>
+
+
 
 <a href = "<?php  echo htmlspecialchars(trim("creatproject.php"))?>"><?php  echo htmlspecialchars(trim("créer un project"))?></a>
 
@@ -59,10 +62,13 @@ $place->listproject();
 
 </p>
 
+
 </div>
 
 
 <div id = "canvas" >
+
+</div>
 
 </div>
 
