@@ -8,11 +8,10 @@ background-color:silver;
 
 position:relative;
 
-border:3px black solid;
+background-color:red;
 
 width:300px;
 
-height:80%;
 
 left:-5px;
 
@@ -26,25 +25,29 @@ position:relative;
 
 height:70%;
 width:40%;
-border:3px black solid;
 left:5px;
 
 }
 
 #canvas{
 
-position : absolute;
-border:3px black solid;
+position:relative;
+background-color:white;
 height:530px;
 width:950px;
-top:90px;
-left:320px;
+top:-70px;
+left:102%;
 
 }
 
 #workplace{
-
+position:relative;
 background-color:blue;
+
+height:100px;
+width:22.90%;
+
+
 
 }
 
