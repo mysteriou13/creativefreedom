@@ -6,15 +6,10 @@ background-color:silver;
 
 #cadre{
 
-position:relative;
+position:absolute;
 
-background-color:red;
-
-width:300px;
-
-
-left:-5px;
-
+width:95%;
+left:2px;
 top:30px;
 
 }
@@ -22,7 +17,7 @@ top:30px;
 #projet{
 
 position:relative;
-
+border-bottom:1px black solid;
 height:70%;
 width:40%;
 left:5px;
@@ -31,11 +26,11 @@ left:5px;
 
 #canvas{
 
-position:relative;
+position:absolute;
 background-color:white;
-height:530px;
-width:950px;
-top:-70px;
+height:105%;
+width:920px;
+top:0px;
 left:102%;
 
 }
@@ -43,11 +38,7 @@ left:102%;
 #workplace{
 position:relative;
 background-color:blue;
-
-height:100px;
+height:540px;
 width:22.90%;
-
-
-
 }
 
