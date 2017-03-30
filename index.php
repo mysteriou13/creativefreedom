@@ -41,12 +41,11 @@ creative freedom
 
 </br>
 
-workplace
 
 <div id = "workplace" >
 
 <div id = "cadre">
-
+Mes sites
 <?php 
 
 $place->listproject();
